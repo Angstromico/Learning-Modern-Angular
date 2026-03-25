@@ -1,15 +1,12 @@
 import { Component } from "@angular/core";
 
 @Component({
-  template: `
-    <h1>Counter: {{ counter }}</h1>
-    <button (click)="changeNUmber('+')" >+</button>
-    <button (click)="changeNUmber('-')">-</button>
-  `
+  templateUrl: './counter.component.html',
+  styleUrl: './counter.component.css'
 })
 export class CounterComponent {
   counter = 0
-  changeNUmber = (change: '+' | '-') => {
+  changeNumber = (change: '+' | '-') => {
     if(change === '+') {
       this.counter++
     }
@@ -17,4 +14,5 @@ export class CounterComponent {
       this.counter--
     }
   }
+  resetCounter = () => this.counter = 0
 }

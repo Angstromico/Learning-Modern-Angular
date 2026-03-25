@@ -1,0 +1,72 @@
+:host {
+  display: block;
+  text-align: center;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 1.5rem 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Botones + y - */
+button:nth-child(2),
+button:nth-child(3) {
+  background-color: #3498db;
+  color: white;
+  min-width: 50px;
+}
+
+button:nth-child(2):hover,
+button:nth-child(3):hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Botón Reset */
+button:last-child {
+  background-color: #ecf0f1;
+  color: #7f8c8d;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:last-child:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
