@@ -6,8 +6,10 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
+
 })
 export class App {
   protected readonly title = signal('Learning Angular bases');
   protected readonly author = signal('Manuel Morales')
+  protected readonly currentYear = signal(new Date().getFullYear());
 }
