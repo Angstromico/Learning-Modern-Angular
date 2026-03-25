@@ -1,0 +1,27 @@
+<h1>{{ name() }}</h1>
+
+<dl>
+  <td>Name:</td>
+  <dd>{{ name() }}</dd>
+
+  <td>Age:</td>
+  <dd>{{ age() }}</dd>
+
+  <td>Method:</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalized:</td>
+  @for (item of getCapitalizeData(); track item) {
+    <li>{{ item }}</li>
+  } @empty {
+    <li>There are nothing to capitalizate.</li>
+  }
+</dl>
+
+<button (click)="changeHero()" class="btn btn-primary mx-2">
+  Change name
+</button>
+
+<button (click)="changeAge()" class="btn btn-primary">Change age</button>
+
+<button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
