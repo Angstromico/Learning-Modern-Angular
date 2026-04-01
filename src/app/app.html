@@ -1,8 +1,4 @@
-<header class="app-header">
-  <nav>
-    <h1>{{ title() }}</h1>
-  </nav>
-</header>
+<app-navbar [title]="title()" />
 
 <main class="content-container mx-5 mt-2">
   <router-outlet />
@@ -11,7 +7,8 @@
 <footer class="app-footer">
   <div class="footer-content">
     <p>
-      &copy; {{ currentYear() }} <strong>{{ author() }}</strong>. All rights reserved.
+      &copy; {{ currentYear() }} <strong>{{ author() }}</strong
+      >. All rights reserved.
     </p>
   </div>
 </footer>
