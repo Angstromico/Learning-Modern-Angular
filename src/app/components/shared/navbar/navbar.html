@@ -4,8 +4,10 @@
       <a class="anchor" href="/">{{ title }}</a>
     </h1>
     <div class="links">
-      <a routerLink="/counter">Counter</a>
-      <a routerLink="/hero">Hero</a>
+      <a routerLink="/counter" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        >Counter</a
+      >
+      <a routerLink="/hero" routerLinkActive="active">Hero</a>
     </div>
   </nav>
 </header>
