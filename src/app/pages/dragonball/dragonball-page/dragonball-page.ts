@@ -13,7 +13,13 @@ export class DragonballPageComponent {
   changeName = (name: string) => this.name.set(name);
   changeKi = (ki: number) => this.ki.set(ki);
 
-  characters: WritableSignal<{ name: string; ki: number }[]> = signal([]);
+  characters: WritableSignal<{ name: string; ki: number }[]> = signal([
+    { name: 'Goku', ki: 3000000 },
+    { name: 'Vegeta', ki: 2400000 },
+    { name: 'Gohan', ki: 1500000 },
+    { name: 'Piccolo', ki: 1200000 },
+    { name: 'Krillin', ki: 75000 },
+  ]);
 
   addCharacter() {
     if (!this.name().trim() || this.ki() === null || this.ki()! <= 0) {
