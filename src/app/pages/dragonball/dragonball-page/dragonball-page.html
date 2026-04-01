@@ -27,7 +27,7 @@
           <li>
             {{ character.name }}
             - Ki:
-            <strong>({{ character.ki }})</strong>
+            <strong [class.text-danger]="character.ki > 9000">({{ character.ki }})</strong>
           </li>
         } @empty {
           <div class="col-12 col-sm-6">
