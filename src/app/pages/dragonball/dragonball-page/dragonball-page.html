@@ -1,1 +1,40 @@
-<p>dragonball-page works!</p>
+<section class="container">
+  <h1>Dragon Ball Page</h1>
+
+  <form class="row" (ngSubmit)="addCharacter(); $event.preventDefault()">
+    <div class="col-12 col-sm-6">
+      <legend>Add Character:</legend>
+      <input
+        type="text"
+        class="form-control mb-2"
+        placeholder="Character name"
+        [value]="name()"
+        (input)="changeName($event.target.value)"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Ki"
+        [value]="ki()"
+        (input)="changeKi(+$event.target.value)"
+      />
+      <button type="submit" class="btn btn-primary">Add Character</button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <legend>List</legend>
+      <ul>
+        @for (character of characters(); track character) {
+          <li>
+            {{ character.name }}
+            - Ki:
+            {{ character.ki }}
+          </li>
+        } @empty {
+          <div class="col-12 col-sm-6">
+            <p>No characters added yet.</p>
+          </div>
+        }
+      </ul>
+    </div>
+  </form>
+</section>
